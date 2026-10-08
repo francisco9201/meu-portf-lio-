@@ -1,0 +1,243 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta
+    name="description"
+    content="Login do portfólio Francisco.dev."
+  >
+
+  <title>Login | Francisco.dev</title>
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="auth-page">
+
+<header class="site-header">
+
+  <div class="container navbar">
+
+    <a class="logo" href="index.html">
+      Francisco.dev
+    </a>
+
+    <div class="nav-actions">
+
+      <button
+        class="icon-btn"
+        data-theme-toggle
+        type="button"
+        aria-label="Alternar tema"
+      >
+        ☀️
+      </button>
+
+      <button
+        class="icon-btn"
+        data-power-toggle
+        type="button"
+        aria-label="Ligar ou desligar site"
+      >
+        ⏻
+      </button>
+
+    </div>
+
+  </div>
+
+</header>
+
+<main class="auth-main container">
+
+  <section
+    class="auth-card card reveal"
+    aria-labelledby="login-title"
+  >
+
+    <div class="login-profile">
+
+      <img
+        src="./image/francisco.png"
+        alt="Foto de Francisco Maciel"
+        loading="eager"
+      >
+
+    </div>
+
+    <span class="badge">
+      Acesso ao portfólio
+    </span>
+
+    <h1 id="login-title">
+      Bem-vindo
+    </h1>
+
+    <p class="muted">
+      Entre para ativar a experiência personalizada do portfólio.
+    </p>
+
+    <form
+      id="loginForm"
+      class="form-stack"
+      novalidate
+    >
+
+      <label for="name">
+        Nome
+      </label>
+
+      <input
+        id="name"
+        name="name"
+        type="text"
+        autocomplete="name"
+        minlength="2"
+        required
+        placeholder="Seu nome"
+      >
+
+      <label for="email">
+        E-mail
+      </label>
+
+      <input
+        id="email"
+        name="email"
+        type="email"
+        autocomplete="email"
+        required
+        placeholder="seu@email.com"
+      >
+
+      <label for="password">
+        Senha
+      </label>
+
+      <div class="password-field">
+
+        <input
+          id="password"
+          name="password"
+          type="password"
+          autocomplete="current-password"
+          minlength="4"
+          required
+          placeholder="Mínimo de 4 caracteres"
+        >
+
+        <button
+          type="button"
+          class="password-toggle"
+          data-password-toggle
+          aria-label="Mostrar senha"
+          aria-pressed="false"
+        >
+          Mostrar
+        </button>
+
+      </div>
+
+      <button
+        class="btn"
+        type="submit"
+      >
+        Entrar
+      </button>
+
+      <p
+        id="loginStatus"
+        class="status"
+        role="status"
+        aria-live="polite"
+      ></p>
+
+    </form>
+
+    <p class="small muted">
+      Este login é uma demonstração front-end: os dados ficam apenas no
+      armazenamento local do navegador. Não use uma senha real.
+    </p>
+
+  </section>
+
+</main>
+
+<footer class="site-footer">
+
+  <div class="container footer-inner">
+
+    <strong>Francisco.dev</strong>
+
+    <div
+      class="socials"
+      aria-label="Redes sociais"
+    >
+
+      <a
+        href="https://github.com/francisco9201"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="GitHub"
+      >
+        <img
+          src="./github.png"
+          alt="GitHub"
+        >
+      </a>
+
+      <a
+        href="https://www.linkedin.com/in/francisco-maciel-2461a3377/"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="LinkedIn"
+      >
+        <img
+          src="./linkedin.png"
+          alt="LinkedIn"
+        >
+      </a>
+
+      <a
+        href="https://www.instagram.com/franciscomaciel9201"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Instagram"
+      >
+        <img
+          src="./instagram.png"
+          alt="Instagram"
+        >
+      </a>
+
+      <a
+        href="https://www.facebook.com/francisco.9201"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Facebook"
+      >
+        <img
+          src="./facebook.png"
+          alt="Facebook"
+        >
+      </a>
+
+    </div>
+
+  </div>
+
+</footer>
+
+<div
+  id="powerOverlay"
+  class="power-overlay"
+  aria-hidden="true"
+></div>
+
+<script src="js/app.js" defer></script>
+
+</body>
+</html>

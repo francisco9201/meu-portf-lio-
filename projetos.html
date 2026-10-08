@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Projetos acadêmicos e quiz interativo de Francisco Maciel.">
+  <title>Projetos | Francisco.dev</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="container navbar">
+    <a class="logo" href="index.html">Francisco.dev</a>
+    <nav aria-label="Navegação principal">
+      <ul class="nav-links">
+        <li><a href="index.html">Início</a></li>
+        <li><a href="index.html#sobre">Sobre</a></li>
+        <li><a href="index.html#habilidades">Habilidades</a></li>
+        <li><a href="projetos.html">Projetos</a></li>
+        <li><a href="midia.html">Mídia</a></li>
+      </ul>
+    </nav>
+    <div class="nav-actions">
+      <span class="user-chip" data-user-name>Visitante</span>
+      <a class="nav-action" data-login-link href="login.html">Login</a>
+      <button class="nav-action logout-btn" data-logout type="button" hidden>Sair</button>
+      <button class="icon-btn" data-theme-toggle type="button" aria-label="Alternar tema">☀️</button>
+      <button class="icon-btn" data-power-toggle type="button" aria-label="Desligar site">⏻</button>
+    </div>
+  </div>
+</header>
+
+<main class="container">
+  <section class="section-heading reveal">
+    <span class="badge">Projeto acadêmico</span>
+    <h1>Quiz interativo</h1>
+    <p>Exercício de desenvolvimento web com diferentes tipos de entrada, validação e pontuação automática.</p>
+  </section>
+
+  <form id="quizForm" class="quiz-grid" novalidate>
+    <article class="card quiz-question reveal">
+      <h2>1. Qual linguagem estrutura páginas web?</h2>
+      <div class="options">
+        <label class="option"><input type="radio" name="q1" value="python"> Python</label>
+        <label class="option"><input type="radio" name="q1" value="html"> HTML</label>
+        <label class="option"><input type="radio" name="q1" value="javascript"> JavaScript</label>
+        <label class="option"><input type="radio" name="q1" value="css"> CSS</label>
+      </div>
+    </article>
+
+    <article class="card quiz-question reveal">
+      <h2>2. Em google.com, "google.com" é o quê?</h2>
+      <input id="q2" type="text" autocomplete="off" placeholder="Digite sua resposta">
+    </article>
+
+    <article class="card quiz-question reveal">
+      <h2>3. Digite uma senha com pelo menos 8 caracteres, contendo letras e números.</h2>
+      <input id="q3" type="password" autocomplete="off" placeholder="Use letras e números">
+    </article>
+
+    <article class="card quiz-question reveal">
+      <h2>4. Em que ano foi lançada a primeira versão do HTML?</h2>
+      <input id="q4" type="number" min="1990" max="2000" placeholder="Digite um ano entre 1990 e 2000" inputmode="numeric">
+    </article>
+
+    <article class="card quiz-question reveal">
+      <h2>5. Quais são linguagens de programação?</h2>
+      <div class="options">
+        <label class="option"><input type="checkbox" name="q5" value="javascript"> JavaScript</label>
+        <label class="option"><input type="checkbox" name="q5" value="html"> HTML</label>
+        <label class="option"><input type="checkbox" name="q5" value="java"> Java</label>
+        <label class="option"><input type="checkbox" name="q5" value="css"> CSS</label>
+      </div>
+    </article>
+
+    <article class="card quiz-question reveal">
+      <h2>6. Envie um arquivo HTML.</h2>
+      <input id="q6" type="file" accept=".html,text/html">
+      <p class="small muted">O arquivo não é enviado para nenhum servidor; apenas sua extensão é validada localmente.</p>
+    </article>
+
+    <article class="card quiz-question reveal">
+      <h2>7. Qual atributo define o tipo do input?</h2>
+      <select id="q7">
+        <option value="">Selecione</option>
+        <option value="id">id</option>
+        <option value="type">type</option>
+        <option value="placeholder">placeholder</option>
+        <option value="name">name</option>
+      </select>
+    </article>
+
+    <article class="card quiz-question reveal">
+      <h2>8. Qual linguagem está associada ao logotipo abaixo?</h2>
+      <img class="quiz-logo" src="assets/javascript.svg" alt="Logotipo de JavaScript">
+      <input id="q8" type="text" autocomplete="off" placeholder="Digite sua resposta">
+    </article>
+
+    <div class="actions">
+      <button class="btn" type="submit">Corrigir quiz</button>
+      <button class="btn ghost" type="button" id="resetQuiz">Limpar</button>
+    </div>
+  </form>
+
+  <section id="quizResult" class="quiz-result card" aria-live="polite">
+    <span class="badge">Resultado</span>
+    <h2 id="score">0/8</h2>
+    <p id="evaluation" class="muted"></p>
+  </section>
+
+  <section class="section">
+    <div class="section-heading"><h2>Faixas de pontuação</h2></div>
+    <div class="table-wrap card">
+      <table>
+        <thead><tr><th>Pontos</th><th>Avaliação</th></tr></thead>
+        <tbody>
+          <tr><td>0–2</td><td>Não desista! Tente novamente.</td></tr>
+          <tr><td>3–4</td><td>Você está no caminho certo. Continue estudando!</td></tr>
+          <tr><td>5–6</td><td>Muito bom!</td></tr>
+          <tr><td>7–8</td><td>Excelente!</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <strong>Francisco Maciel</strong>
+    <div class="socials" aria-label="Redes sociais">
+      <a href="https://github.com/francisco9201" target="_blank" rel="noopener noreferrer"><img src="assets/github.svg" alt="GitHub"></a>
+      <a href="https://www.linkedin.com/in/francisco-maciel-2461a3377/" target="_blank" rel="noopener noreferrer"><img src="assets/linkedin.svg" alt="LinkedIn"></a>
+      <a href="https://www.instagram.com/franciscomaciel9201" target="_blank" rel="noopener noreferrer"><img src="assets/instagram.svg" alt="Instagram"></a>
+      <a href="https://www.facebook.com/francisco.9201" target="_blank" rel="noopener noreferrer"><img src="assets/facebook.png" alt="Facebook"></a>
+    </div>
+  </div>
+</footer>
+<button class="back-top" data-back-top type="button" aria-label="Voltar ao topo">↑</button>
+<div id="powerOverlay" class="power-overlay" aria-hidden="true"></div>
+<script src="js/app.js" defer></script>
+</body>
+</html>
